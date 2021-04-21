@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const googleController = require("../../controllers/googleController.js");
+const googleController = require("../../controllers/googleController");
 
 router.route("/").get(googleController.findAll);
 
