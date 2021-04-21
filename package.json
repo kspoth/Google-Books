@@ -1,5 +1,6 @@
 {
-  "name": "gigoogle-books",
+  "name": "google-books",
+  "engines" : { "node" : ">=14.15.42" },
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
