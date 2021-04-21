@@ -75,7 +75,7 @@ class Nav extends Component {
                 }
                 to="/saved"
               >
-                Saved
+                My Saved Books
               </Link>
             </li>
           </ul>

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Jumbotron from "../components/Jumbotron";
 import Card from "../components/Card";
 import Form from "../components/Form";
 import Book from "../components/Book";
@@ -12,7 +11,7 @@ class Home extends Component {
   state = {
     books: [],
     q: "",
-    message: "Search For A Book To Begin!",
+    message: "Search for a book to begin",
   };
 
   handleInputChange = (event) => {
@@ -32,7 +31,7 @@ class Home extends Component {
       .catch(() =>
         this.setState({
           books: [],
-          message: "No New Books Found, Try a Different Query",
+          message: "No books found, try a different title.",
         })
       );
   };
@@ -60,16 +59,6 @@ class Home extends Component {
     return (
       <Container>
         <Row>
-          <Col size="md-12">
-            <Jumbotron>
-              <h1 className="text-center">
-                <strong>(React) Google Books Search</strong>
-              </h1>
-              <h2 className="text-center">
-                Search for and Save Books of Interest.
-              </h2>
-            </Jumbotron>
-          </Col>
           <Col size="md-12">
             <Card title="Book Search" icon="far fa-book">
               <Form
