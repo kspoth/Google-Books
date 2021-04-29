@@ -15,15 +15,15 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
+const mongodb =
+  "mongodb+srv://kspoth08:Scooter%231@cluster0.lmx5w.mongodb.net/googlebooks?retryWrites=true&w=majority";
 // Connect to the Mongo DB
-mongoose.connect(
-  process.env.MONGODB_URI ||
-    "mongodb+srv://kspoth08:Scooter%231@cluster0.lmx5w.mongodb.net/googlebooks?retryWrites=true&w=majority",
-  {
-    useCreateIndex: true,
-    useNewUrlParser: true,
-  }
-);
+mongoose.connect(process.env.MONGODB_URI || mongodb, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+});
 
 // Start the API server
 app.listen(PORT, () =>
